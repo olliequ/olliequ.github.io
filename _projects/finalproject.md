@@ -43,7 +43,7 @@ I have a main dashboard, which was created using `mark_rect()` from Altair. It s
 I've made it interactive such that:
 - Hovering over box gives you details on which country, city, and medal tally you're looking at. This is useful considering the chart is big, and you can get easily lost!
 - There is another visualization below. By default, it shows the amount of medals ever collected in total for all nations, split by the type of medal. **When you click on a box** though, this visualization will instantly update to the medal tally for that specific nation at that specific Olympic Games host city.
-- Furthermore, when you click on a box all other boxes 'fade away' -- that is, their colour dims and the box you've selected vividly changes colour and becomes apparent.
+- Furthermore, when you click on a box all other boxes 'fade away' -- that is, their colour dims and the box you've selected vividly changes colour and becomes apparent. To get the colours back, just click away from a square (click white empty space).
 
 I think this visualization dashboard is really visually appealing. I think it's also useful for spotting trends. I found it interesting for example that when a given nation performs in a city of their own, they have a higher medal count than if they were competing in a different city. Look at GBR's performance in the London games, Australia's performance in the Sydney games!
 
