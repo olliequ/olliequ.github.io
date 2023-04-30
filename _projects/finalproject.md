@@ -16,14 +16,14 @@ custom_js:
 ## Introduction
 For the final project I analysed extensive data for the Olympic Games, spanning over a century! My goal was to obtain the most interesting data among the datasets I looked at, and present them in the most interesting way possible! To complete my mission, I used Altair and Vegalite.
 
-My notebook can be found here by clicking the button below:
+My notebook can be found by clicking the button below (it should be noted the notebook doesn't seem to fully render on GitHub -- it stops rendering just before the main visualization is suppose to appear):
 
 <div class="center">
 {% include elements/button.html link="https://github.com/olliequ/olliequ.github.io/blob/main/python_notebooks/part3.ipynb" text="The Notebook!" %}
 </div>
 
 ## Primary Dataset/Visualization
-My primary dataset was a massive CSV of individual entries of Olympic athletes, including their age, height, weight, but more importantly their nation, event, and any medals won. The dataset is titled '*120 years of Olympic history: athletes and results*'. The dataset is from Kaggle, posted by the user `@rgriffin`, accessible here: https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results. This user gathered the data from an organization called `sports-reference`, whose Olympic data has now branched off as `Olympedia`. It's a dataset spanning 120 years of Olympic Games statistics revolving around athelete & medal information.
+My primary dataset was a massive CSV of individual entries of Olympic athletes, including their age, height, weight, but more importantly their nation, event, and any medals won. The dataset is titled '*120 years of Olympic history: athletes and results*'. The dataset is from Kaggle, posted by the user `@rgriffin`, accessible here: https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results. This user gathered the data from an organization called `sports-reference`, whose Olympic data has now branched off as `Olympedia`. It's a dataset spanning 120 years of Olympic Games statistics revolving around athlete & medal information.
 
 Below is my main visualization (it's interactive!) for this dataset:
 
