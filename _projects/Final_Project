@@ -1,0 +1,44 @@
+---
+name: Final Project!
+tools: [Python, HTML, vega-lite]
+image: assets/pngs/cars.png
+description: Submission for the Final Project!
+custom_js:
+  - vega.min
+  - vega-lite.min
+  - vega-embed.min
+  - justcharts
+---
+
+
+# IS445: Final Project
+## This was completed by Oliver Quarm (NetID: oquarm2, Group 10)
+
+## Introduction
+For the final project I analysed extensive data for the Olympic Games, spanning over a century! My primary dataset was a massive CSV of individual entries of athletes, including their age, height, weight, but more importantly their nation, event, and any medals won. Below is my main visualization (it's interactive!) for this dataset:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/main_dashboard.json" style="width: 100%"></vegachart>
+
+My notebook is [here](https://github.com/olliequ/olliequ.github.io/blob/main/python_notebooks/hw10.ipynb). Alternatively, you can access it using the `The Analysis` button in the bottom right.
+
+Below is an embedded version of the interactive chart we have created. This was done by saving the chart in the Jupter Notebook as a JSON file in the `assets` folder.
+
+For the contextual dataset, I looked at more high-level, wholistic data for each Olympic Games host nation. I made 2 visualizations: 1 was the spending amount for various host nations, and the second was the number of events various host nations had for their Olympic Games. These 2 are displayed below:
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/contextual.json" style="width: 100%"></vegachart>
+
+## Write-up
+
+In our **first plot**, we are visualizing a bar graph of the amount of licenses in each state. We did this to see if there was any clear bias towards a certain state in this dataset, and we found that there is a massive bias towards Illinois. We made each state a different color on the chart to help the viewer differentiate the states easier and to enhance the visual appeal of the graph. One example of data transformation that we used for this visualization was filtering out all the licenses in this dataset that do **not** have their state listed -- some rows had this `State` field empty, or as `NaN`, and were thus filtered out. 
+
+The **second plot** is linked to our first plot and will show the number of licenses in each county of the states that the viewer chooses (this selection is done via the interactivity tool, discussed below). With this plot, the viewer can go deeper into each state and see what counties within each state have the licenses in this dataset. For this visualization we also made each county have different color for the purpose of allowing the user to easily differentiate each county (and again enhance the visual appeal of the graph). We also used data transformations for this graph by filtering out the rows that did not have a county listed. Some rows had their `County` field as `NaN` and were filtered out accordingly. 
+
+To implement the interactivity feature, we used the `brush` tool, implementing it via the `add_selection()` function. It's **linked** to the second visualization using the `transform_filter()` function. As discussed above, this allows the user to select a state and see the license distributions across all the counties (that have license entries in the dataset) in that state. By default (at the start when no selection is made), all counties are displayed with their corresponding license count.
+
+<div class="left">
+{% include elements/button.html link="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/licenses_fall2022.csv" text="The Data" %}
+</div>
+
+<div class="right">
+{% include elements/button.html link="https://github.com/olliequ/olliequ.github.io/blob/main/python_notebooks/hw10.ipynb" text="The Analysis" %}
+</div> 
